@@ -1,0 +1,16 @@
+ public static void sortNegative(int arr[],int n){
+        int left=0;
+        int right=n-1;
+        int temp;
+        while(left<right){
+            if(arr[left]>=0){
+                temp=arr[left];
+                arr[left]=arr[right];
+                arr[right]=temp;
+                right--;
+            }
+            else{
+                left++;
+            }
+        }
+    }
