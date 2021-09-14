@@ -1,0 +1,16 @@
+ long maxSubarraySum(int arr[], int n){
+        
+       long max=arr[0];
+       long sum=0;
+       int itr=0;
+       while(itr<n){
+           sum=sum+arr[itr];
+           itr++;
+           if(max<sum){
+               max=sum;
+           }
+           if(sum<0){sum=0;}
+       }
+       return max;
+    }
+    
