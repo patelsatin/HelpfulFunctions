@@ -1,0 +1,35 @@
+class Solution {
+        
+        public static ArrayList<String> calculate(ArrayList<String> list,int n){
+        if(list.size()==n){
+            return list;
+        }
+        String test="";
+        String str=list.get(list.size()-1);
+        int counter=1;
+        for(int i=str.length()-1;i>0;i--){
+                if(str.charAt(i)==str.charAt(i-1)){
+                    counter++;
+                }
+                else{
+                    test=counter+String.valueOf(str.charAt(i))+test;
+                    counter=1;
+                }
+              }
+            test=counter+String.valueOf(str.charAt(0))+test;
+            list.add(list.size(),test);
+            return calculate(list,n);
+    }
+    public String countAndSay(int n) {
+       if(n==1) return "1";
+       else if(n==2) return "11";
+    else{
+       ArrayList<String> arr= new ArrayList<String>();
+        arr.add("1");
+        arr.add("11");
+        arr.addAll(calculate(arr,n));
+        return arr.get(arr.size()-1);
+    }
+      
+}
+}
