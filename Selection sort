@@ -1,0 +1,22 @@
+public static int getMax(int [] arr, int end){
+        int max=arr[0];
+        int maxIndex=0;
+        for(int i=0;i<=end;i++){
+            if(arr[i]>max){
+                max=arr[i];
+                maxIndex=i;
+            }
+        }
+        return maxIndex;
+    }
+    public static void sort(int [] arr){
+        int end=arr.length-1;
+        int temp=0;
+        while(end!=0){
+            int maxIndex=getMax(arr,end);
+            temp=arr[end];
+            arr[end]=arr[maxIndex];
+            arr[maxIndex]=temp;
+            end--;
+        }
+    }
