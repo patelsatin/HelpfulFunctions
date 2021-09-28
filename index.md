@@ -1,4 +1,4 @@
-## Welcome to GitHub Pages
+## Welcome to Java 1.8 Features----
 
 You can use the [editor on GitHub](https://github.com/patelsatin/HelpfulFunctions/edit/gh-pages/index.md) to maintain and preview the content for your website in Markdown files.
 
